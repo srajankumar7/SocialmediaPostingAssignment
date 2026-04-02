@@ -12,7 +12,9 @@ const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/mini-social';
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 app.use(express.json());
 
 // MongoDB Connection
